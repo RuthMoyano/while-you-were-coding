@@ -13,7 +13,11 @@ console.log('##### Challenge 1 #####');
 //
 // Console out the numbers from 1-20, but only if they're divisible by 3.
 // Hint: Use `if` and a modulus operation.
-
+for (let i = 1; <= 20; i++) {
+    if( i % 3 === 0) {
+        console.log(i);
+    }
+}
 
 
 console.log('##### Challenge 2 #####');
@@ -21,7 +25,9 @@ console.log('##### Challenge 2 #####');
 //
 // Console out the numbers from 1-20. BACKWARDS.
 
-
+for(let i = 20; i >= 1; i --) {
+    console.log(i);
+}
 
 console.log('##### Challenge 3 #####');
 // 3.
@@ -30,6 +36,11 @@ console.log('##### Challenge 3 #####');
 // individually.
 let string3 = 'Boy howdy am I good at this!';
 
+for (const letter of string3) {
+    if(letter !== ' ') {
+    console.log(letter);
+    }
+}
 
 
 console.log('##### Challenge 4 #####');
@@ -39,7 +50,9 @@ console.log('##### Challenge 4 #####');
 // character, print out every third character.
 let string4 = 'And getting better every day.';
 
-
+for (let i = 0; i < string4.length; i = i + 3) {
+    console.log(srting4[i]);
+}
 
 console.log('##### Challenge 5 #####');
 // 5. 
@@ -48,6 +61,9 @@ console.log('##### Challenge 5 #####');
 // UPPERCASED.
 let string5 = 'Am I the best?';
 
+for (const letter of string5) {
+    console.log(letter.toUpperCase());
+}
 
 
 console.log('##### Challenge 6 #####');
@@ -55,9 +71,17 @@ console.log('##### Challenge 6 #####');
 //
 // For the string 'Whoa, I am the best!', console out the letters individually,
 // but also capitalize the letters in the third word.
-let string6 = 'Whoa, I am the best!';
 
-
+let list = string6.split(' ')
+for (let i=0; i<list.length;i++){
+    if(i===2){
+        list[i] = list[i].toUpperCase()
+    }
+}
+let newStr = list.join(' ')
+for (let i=0; i<newStr.length;i++){
+    console.log(newStr[i])
+}
 
 console.log('##### Challenge 7 #####');
 // 7.
@@ -67,7 +91,9 @@ console.log('##### Challenge 7 #####');
 // `.`, followed by `s`, followed by `d`, and so on.
 let string7 = 'I am become death, destroyer of worlds.';
 
-
+for (let i = 0; i < string7.length; i ++) {
+    console.log(string7[i]);
+}
 
 console.log('##### Challenge 8 #####');
 // 8.
@@ -82,6 +108,15 @@ const names = 'Alex|Mesuara|Brian|Chanel|Matt|Jeremy B.|Jose|Andy|Dustin|Joshua|
 
 // Don't print the pipes!
 
-
+let name = '';
+for (const char of names) {
+    if (char === '|') {
+        console.log(`Here today is: ${name}`);
+        name = '';
+    } else {
+        name = name + char;
+    }
+}
+console.log(`Here today is: ${name}`);
 
 
